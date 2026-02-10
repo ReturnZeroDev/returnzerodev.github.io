@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined Behaviour | Unified Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'JetBrains+Mono', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        .terminal-border {
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .terminal-border:hover {
+            border-color: #CCFF00;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .glitch-text {
+            color: #CCFF00;
+            text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+            animation: glitch 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 1px 0 #ff00c1, -1px 0 #00fff9; }
+            50% { text-shadow: -1px 0 #ff00c1, 1px 0 #00fff9; }
+            100% { text-shadow: 1px 0 #ff00c1, -1px 0 #00fff9; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-6 overflow-x-hidden">
+
+    <!-- Header Section -->
+    <div class="w-full max-w-md text-center mb-10">
+        <div class="mb-4 inline-block p-4 rounded-full border-2 border-[#CCFF00] text-2xl font-bold">
+            { UB }
+        </div>
+        <h1 class="text-xl font-bold uppercase tracking-widest mb-2">Undefined Behaviour</h1>
+        <p class="text-sm text-gray-500">// I write code to bring order. I ride to find chaos.</p>
+    </div>
+
+    <!-- Links Container -->
+    <div class="w-full max-w-md space-y-4">
+        
+        <!-- Moto Channel -->
+        <a href="https://www.youtube.com/@UndefinedBehaviourMoto" target="_blank" class="terminal-border block w-full p-4 bg-[#111] rounded-lg group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-[#CCFF00]">// the escape</span>
+                    <h2 class="font-bold">Undefined Behaviour</h2>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-hover:text-[#CCFF00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </div>
+        </a>
+
+        <!-- Logic Channel -->
+        <a href="https://www.youtube.com/@ReturnZeroDev" target="_blank" class="terminal-border block w-full p-4 bg-[#111] rounded-lg group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-[#CCFF00]">// the logic</span>
+                    <h2 class="font-bold">Return Zero</h2>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-hover:text-[#CCFF00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ReturnZeroDev" target="_blank" class="terminal-border block w-full p-4 bg-[#111] rounded-lg group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-[#CCFF00]">// source_code</span>
+                    <h2 class="font-bold">Mastery Archive</h2>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-hover:text-[#CCFF00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+            </div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:return.zero.dev@gmail.com" class="terminal-border block w-full p-4 bg-[#111] rounded-lg group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-[#CCFF00]">// input_output</span>
+                    <h2 class="font-bold">Contact Architect</h2>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-hover:text-[#CCFF00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-[10px] text-gray-600 uppercase tracking-widest text-center">
+        System Status: Online | Location: Kashmir, IN<br>
+        © 2026 Return Zero Systems
+    </footer>
+
+</body>
+</html>
