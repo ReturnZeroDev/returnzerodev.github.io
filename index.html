@@ -26,6 +26,8 @@
             background-color: var(--bg);
             color: #e0e0e0;
             overflow-x: hidden;
+            user-select: none; /* Disables text highlighting */
+            -webkit-user-select: none;
         }
 
         /* CRT Effects */
@@ -99,7 +101,7 @@
             transition: 0.5s;
         }
 
-        .terminal-btn::hover::before {
+        .terminal-btn:hover::before {
             left: 100%;
         }
 
@@ -267,6 +269,21 @@
     </main>
 
     <script>
+        // SYSTEM SECURITY: DISABLE RIGHT CLICK & INSPECT
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        document.addEventListener('keydown', function(e) {
+            if (
+                (e.ctrlKey && e.shiftKey && e.key === 'I') || // Inspect
+                (e.ctrlKey && e.shiftKey && e.key === 'J') || // Console
+                (e.ctrlKey && e.key === 'U') || // View Source
+                e.key === 'F12' // Dev Tools
+            ) {
+                e.preventDefault();
+                console.log("%c⚠️ SYSTEM ALERT: SOURCE CODE ENCRYPTED", "color: #CCFF00; font-family: monospace; font-size: 20px; background: #000; padding: 10px;");
+            }
+        });
+
         // Boot Sequence Simulation
         const bootLog = document.getElementById('boot-log');
         const lines = [
